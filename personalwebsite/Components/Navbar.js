@@ -8,7 +8,7 @@ import {
 import { useState } from "react"
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 import NextLink from "next/Link"
-function Navbar() {
+function Navbar(children) {
   const { colorMode, toggleColorMode } = useColorMode()
   const isDark = colorMode === "dark"
   const [display , changedisplay] = useState("none")
