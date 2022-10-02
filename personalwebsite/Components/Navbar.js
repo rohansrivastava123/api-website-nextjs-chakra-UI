@@ -8,8 +8,7 @@ import {
 import { useState } from "react"
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 import NextLink from "next/Link"
-import Categoriesdata from '../pages/Categoriesdata'
-import Indexdata from "../pages/Indexdata"
+import { Text } from "@chakra-ui/react"
 function Navbar(children) {
   const { colorMode, toggleColorMode } = useColorMode()
   const isDark = colorMode === "dark"
@@ -21,13 +20,13 @@ function Navbar(children) {
       <Flex pos="fixed" top="1rem" right="3rem" align="center">
         <Flex display={["none", "none", "flex", "flex"]}>
           <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
-              Home
+            <Button as="a" variant="ghost" aria-label="Home" my={3} w="100%">
+              <Text fontSize={["lg", "xl", "2xl"]}>Home</Text>
             </Button>
           </NextLink>
           <NextLink href="/Indexdata" passHref>
-            <Button as="a" variant="ghost" aria-label="Index" my={5} w="100%">
-              Index
+            <Button as="a" variant="ghost" aria-label="Index" my={3} w="100%">
+              <Text fontSize={["lg", "xl", "2xl"]}>Index</Text>
             </Button>
           </NextLink>
           <NextLink href="/Categoriesdata" passHref>
@@ -35,10 +34,10 @@ function Navbar(children) {
               as="a"
               variant="ghost"
               aria-label="Categories"
-              my={5}
+              my={3}
               w="100%"
             >
-              Categories
+              <Text fontSize={["lg", "xl", "2xl"]}>Categories</Text>
             </Button>
           </NextLink>
         </Flex>
@@ -46,7 +45,7 @@ function Navbar(children) {
           icon={<HamburgerIcon />}
           aria-label="Open menu"
           mr="2"
-          size={"lg"}
+          size={"md"}
           display={
             crossbtn === true ? "none" : ["flex", "flex", "none", "none"]
           }
@@ -56,7 +55,7 @@ function Navbar(children) {
           }}
         />
         <Switch
-          left="1rem"
+          left="2rem"
           as="a"
           color="green"
           isChecked={isDark}
@@ -84,7 +83,7 @@ function Navbar(children) {
             mr={2}
             icon={<CloseIcon />}
             aria-label="Close menu"
-            size="lg"
+            size="md"
             onClick={() => {
               changedisplay("none")
               togglecross(false)
