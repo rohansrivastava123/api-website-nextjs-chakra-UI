@@ -1,7 +1,7 @@
 import React from 'react'
 import{Box ,Text}  from '@chakra-ui/react'
 import {useColorMode} from '@chakra-ui/react'
-import NextLink from "next/Link"
+import NextLink from "next/link"
 function Datacard({data}) {
     const {colorMode} = useColorMode()
     
@@ -9,7 +9,7 @@ function Datacard({data}) {
     <>
         <NextLink href={`/Index/${data.API}`} >
         <a>
-        <Box className='indexbox'  bgColor={colorMode==='dark'?'whiteAlpha.200':'	#F0F0F0' }>
+        <Box mb={'1rem'} className='indexbox'  bgColor={colorMode==='dark'?'whiteAlpha.200':'	#F0F0F0' }>
             <Text fontSize={['lg','xl','2xl']} fontWeight={600} fontFamily={'fangsong'}
             >{data.API} ({data.Category})</Text>
             <Text fontSize={['xsm','sm','md']}>{data.Description}</Text>

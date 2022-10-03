@@ -7,7 +7,7 @@ import {
 } from "@chakra-ui/react"
 import { useState } from "react"
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
-import NextLink from "next/Link"
+import NextLink from "next/link"
 import { Text } from "@chakra-ui/react"
 function Navbar(children) {
   const { colorMode, toggleColorMode } = useColorMode()

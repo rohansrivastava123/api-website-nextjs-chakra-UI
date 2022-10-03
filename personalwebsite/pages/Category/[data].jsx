@@ -27,7 +27,7 @@ function Categorydata({posts}) {
       }).map((post)=>{
         console.log(post)
         return(
-          <Box className='specificcategorybox'  bgColor={colorMode==='dark'?'whiteAlpha.200':'	#F0F0F0' }>
+          <Box mb={'1rem'} className='specificcategorybox'  bgColor={colorMode==='dark'?'whiteAlpha.200':'	#F0F0F0' }>
             <Text fontSize={['lg','xl','2xl']} fontWeight={600} fontFamily={'fangsong'}
             >{post.API}</Text>
             <Text fontSize={['xsm','sm','md']}>{post.Description}</Text>
