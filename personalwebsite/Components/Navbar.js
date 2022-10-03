@@ -55,7 +55,7 @@ function Navbar(children) {
           }}
         />
         <Switch
-          left="2rem"
+          left="1rem"
           as="a"
           color="green"
           isChecked={isDark}
